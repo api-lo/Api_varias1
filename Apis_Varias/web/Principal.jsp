@@ -13,6 +13,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Principal!</h1>
+
     </body>
 </html>

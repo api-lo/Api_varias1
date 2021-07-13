@@ -103,7 +103,7 @@
                     // ...
                 });
             }
-
+           
             function loginWithGithub() {
 
         var provider = new firebase.auth.GithubAuthProvider();       
