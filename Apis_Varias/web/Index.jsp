@@ -26,6 +26,7 @@
         </script>
         
         
+        
         <div class="container">
             <div class="login" >
                 <div class="row p-5">
@@ -47,7 +48,7 @@
                     <div class="col-12 mt-5">
                         <div class="row">
                             <div class="col-4">
-                                <input  type="submit" class="btn btn-light imgF ajuste" value="" />
+                                <input  type="submit" class="btn btn-light imgF ajuste" value="" onclick="loginWithFacebook()" />
                             </div>
                             <div class="col-4">
                                  <input  type="submit" onclick="loginWithGithub()" class="btn btn-light imgG ajuste" value="" />
@@ -119,6 +120,22 @@
                             var errorMessage = error.message;
                         });
             }
+            
+            
+            
+    var loginWithFacebook= function(){
+        var provider = new firebase.auth.FacebookAuthProvider();
+        firebase.auth().signInWithPopup(provider).then(function(result){
+            var token=result.credential.accessToken;
+            var user=result.user;
+        }).catch(function(error){
+            var errorCode=error.code;
+            var errorMessage=error.message;
+            var email=error.email;
+            var credential=error.credential;
+            
+            console.log(errorMessage);
+        });}
 
 //            firebase.auth().onAuthStateChanged((user) => {
 //                if (user) {
@@ -127,6 +144,9 @@
 //                }
 //            });
         </script>
+       
+        
+        
 
 
     </body>
