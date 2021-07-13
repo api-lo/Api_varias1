@@ -1,0 +1,68 @@
+.login
+{
+    margin: 0px auto;
+    width:400px;
+    border: 1px solid black;
+    height: 530px;
+    margin-top:25px;
+    border-radius: 10px;
+    
+}
+.imgP
+{   
+    
+    background: url(https://img.icons8.com/fluent/50/000000/twitter.png);    
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px #040505 solid;
+    background-color: white;
+    
+}
+.ajuste:hover{
+        
+    transform:scale(2); 
+    border: 1px slategrey solid;}
+.imgY
+{    
+    background: url(https://img.icons8.com/color/48/000000/yahoo-mail-app.png);    
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px #005cbf solid; 
+    background-color: white;
+}
+.imgM
+{    
+    background: url(https://img.icons8.com/color/48/000000/microsoft.png);    
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px #28a745 solid;
+}
+.imgG
+{ 
+    background: url(https://img.icons8.com/fluent/48/000000/github.png);    
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px #343a40 solid;
+}
+.imgGo
+{    
+    background: url(https://img.icons8.com/fluent/48/000000/google-logo.png);    
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px tomato solid;
+}
+.imgF{
+    background: url(https://img.icons8.com/color/48/000000/facebook.png);    
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px #007bff solid;
+}
+.ajuste{
+    width: 100%;
+}
