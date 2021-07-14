@@ -76,10 +76,7 @@
 
                     <div class="col-12 mt-1">
                         <div class="row">
-                            <div class="col-6">
-                                <input  type="submit" onclick="iniciarMicrosoft()" class="btn btn-light imgM ajuste" value="" />
-                            </div>
-                            <div class="col-6">
+                            <div class="col-12">
                                 <input  type="submit" onclick="iniciaryahoo()" class="btn btn-light imgY ajuste"  value="" />
                             </div>
 <!--                            <div class="col-4">

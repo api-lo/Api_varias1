@@ -23,27 +23,7 @@ function ocultar()
         xy.style.display = "block";
     }
 }
-function iniciarMicrosoft()
-{
-    var provider = new firebase.auth.OAuthProvider('microsoft.com');
-    firebase.auth().signInWithPopup(provider)
-            .then((result) => {
-                var credential = result.credential;
-                var accessToken = credential.accessToken;
-                var idToken = credential.idToken;
-                var user = result.user;
-//                console.log(user);              
-//                ocultar();
-//                document.getElementById("nombre").value = user.displayName;
-//                document.getElementById("email").value = user.email;
-//                document.getElementById("foto").src = user.photoURL;
-//                document.getElementById("inicio").value = "GOOGLE";
-//                document.getElementById("estado").value = user.emailVerified;
-            })
-            .catch((error) => {
-                    console.log(error.message);
-            });
-}
+
 function iniciaryahoo()
 {
     var provider = new firebase.auth.OAuthProvider('yahoo.com');
