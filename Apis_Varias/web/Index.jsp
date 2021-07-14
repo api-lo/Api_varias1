@@ -62,7 +62,7 @@
                     <div class="col-12 mt-1">
                         <div class="row">
                             <div class="col-4">
-                                <input  type="submit" class="btn btn-light imgM ajuste" value="" />
+                                <input  type="submit" onclick="iniciarMicrosoft()" class="btn btn-light imgM ajuste" value="" />
                             </div>
                             <div class="col-4">
                                 <input  type="submit" onclick="iniciaryahoo()" class="btn btn-light imgY ajuste"  value="" />
@@ -79,6 +79,25 @@
         </div>       
 
         <script type="text/javascript" >
+            function iniciarMicrosoft()
+            {
+                var provider = new firebase.auth.OAuthProvider('microsoft.com');
+                firebase.auth().signInWithPopup(provider)
+                        .then((result) => {
+                            // IdP data available in result.additionalUserInfo.profile.
+                            // ...
+
+                            /** @type {firebase.auth.OAuthCredential} */
+                            var credential = result.credential;
+
+                            // OAuth access and id tokens can also be retrieved:
+                            var accessToken = credential.accessToken;
+                            var idToken = credential.idToken;
+                        })
+                        .catch((error) => {
+                            // Handle error.
+                        });
+            }
             function iniciaryahoo()
             {
                 var provider = new firebase.auth.OAuthProvider('yahoo.com');
@@ -93,7 +112,7 @@
                             // Yahoo OAuth access token and ID token can be retrieved by calling:
                             var accessToken = credential.accessToken;
                             var idToken = credential.idToken;
-                             location.href = "Principal.jsp";
+                            location.href = "Principal.jsp";
                         })
                         .catch((error) => {
                             // Handle error.
